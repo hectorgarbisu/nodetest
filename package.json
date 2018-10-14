@@ -1,0 +1,25 @@
+{
+  "name": "my-node-test",
+  "version": "1.0.0",
+  "description": "probando, probando",
+  "main": "nodeTest.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hectorgarbisu/nodetest.git"
+  },
+  "keywords": [
+    "test",
+    "node",
+    "resful",
+    "api"
+  ],
+  "author": "geco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hectorgarbisu/nodetest/issues"
+  },
+  "homepage": "https://github.com/hectorgarbisu/nodetest#readme"
+}
