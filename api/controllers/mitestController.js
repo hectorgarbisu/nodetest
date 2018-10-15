@@ -3,6 +3,7 @@
 
 var mongoose = require('mongoose'),
   Task = mongoose.model('Tasks');
+var path = require("path");
 
 exports.list_all_tasks = (req, res) => {
   Task.find({}, (err, task) => {
@@ -14,9 +15,12 @@ exports.list_all_tasks = (req, res) => {
 
 
 exports.admin_page = (req,res) => {
-  res.send("blip blip")
+  res.send("admin page <br><a href=\"http://localhost:3000/\"> link </a>    ")
 }
 
+exports.main_page = (req,res) => {
+  res.sendFile(path.join(__dirname, '..', '..', "src", "index.html"))
+}
 exports.create_a_task = (req, res) => {
   var new_task = new Task(req.body);
   new_task.save((err, task) => {

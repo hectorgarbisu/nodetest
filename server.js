@@ -13,7 +13,6 @@ mongoose.connect('mongodb://localhost:27017/mitest', { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 var routes = require('./api/routes/mitestRoutes'); //importing route
 routes(app); //register the route
 
