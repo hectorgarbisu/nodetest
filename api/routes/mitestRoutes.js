@@ -1,15 +1,17 @@
 'use strict';
 module.exports = (app) => {
-  var todoList = require('../controllers/mitestController');
+  var mitestController = require('../controllers/mitestController');
 
   // todoList Routes
   app.route('/tasks')
-    .get(todoList.list_all_tasks)
-    .post(todoList.create_a_task);
+    .get(mitestController.list_all_tasks)
+    .post(mitestController.create_a_task);
 
+  app.route('/admin')
+    .get(mitestController.admin_page)
 
   app.route('/tasks/:taskId')
-    .get(todoList.read_a_task)
-    .put(todoList.update_a_task)
-    .delete(todoList.delete_a_task);
+    .get(mitestController.read_a_task)
+    .put(mitestController.update_a_task)
+    .delete(mitestController.delete_a_task);
 };

@@ -13,7 +13,9 @@ exports.list_all_tasks = (req, res) => {
 };
 
 
-
+exports.admin_page = (req,res) => {
+  res.send("blip blip")
+}
 
 exports.create_a_task = (req, res) => {
   var new_task = new Task(req.body);
